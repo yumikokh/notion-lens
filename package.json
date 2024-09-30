@@ -1,9 +1,15 @@
 {
   "name": "notion-lens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple CLI tool and TypeScript library for summarizing and reflecting on your Notion daily journal entries using OpenAI API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "dev": "node -r ts-node/register --env-file=.env",
     "build": "tsc",
