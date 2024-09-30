@@ -36,6 +36,10 @@ ${configData}`);
     process.exit(0);
   }
 
+  if (!fs.existsSync(configPath)) {
+    fs.writeFileSync(configPath, "{}");
+  }
+
   const currentConfig: PromptConfig = JSON.parse(
     fs.readFileSync(configPath, "utf-8")
   );

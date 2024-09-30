@@ -1,6 +1,6 @@
 {
   "name": "notion-lens",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "A simple CLI tool and TypeScript library for summarizing and reflecting on your Notion daily journal entries using OpenAI API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

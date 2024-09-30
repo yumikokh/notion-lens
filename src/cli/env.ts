@@ -9,7 +9,6 @@ export const ENVS = {
   NOTION_DATABASE_ID: "NOTION_DATABASE_ID",
 } as const;
 
-
 dotenv.config();
 
 const ENV_KEYS = Object.values(ENVS);
@@ -35,6 +34,9 @@ ${envData}`);
   }
 
   // .envファイルから現在の設定を読み込む
+  if (!fs.existsSync(envFilePath)) {
+    fs.writeFileSync(envFilePath, "");
+  }
   const currentEnv = dotenv.parse(fs.readFileSync(envFilePath, "utf8"));
   const newEnv = { ...currentEnv };
 
