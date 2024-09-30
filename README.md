@@ -1,4 +1,6 @@
-# Notion-Lens
+# Notion-Lens  
+  
+![NPM Version](https://img.shields.io/npm/v/notion-lens) ![GitHub License](https://img.shields.io/github/license/yumikokh/notion-lens)
 
 A simple CLI tool and TypeScript library for summarizing and reflecting on your Notion daily journal entries using OpenAI API [chatgpt-4o-latest](https://platform.openai.com/docs/models).
 
