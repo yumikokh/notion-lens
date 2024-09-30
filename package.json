@@ -1,11 +1,13 @@
 {
   "name": "notion-lens",
   "version": "0.1.0",
-  "description": "",
+  "description": "A simple CLI tool and TypeScript library for summarizing and reflecting on your Notion daily journal entries using OpenAI API",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "node -r ts-node/register --env-file=.env",
     "build": "tsc",
+    "prepare": "npm run build",
     "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix"
@@ -44,5 +46,13 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
     "vitest": "^2.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yumikokh/notion-lens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yumikokh/notion-lens/issues"
+  },
+  "homepage": "https://github.com/yumikokh/notion-lens#readme"
 }
