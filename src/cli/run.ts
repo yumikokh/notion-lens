@@ -47,9 +47,7 @@ export const run = async (opts: RunOptions) => {
     typeof opts.database === "string"
       ? opts.database
       : process.env[ENVS.NOTION_DATABASE_ID];
-  const outputPath = opts.output
-    ? path.join(__dirname, "../../", opts.output)
-    : undefined;
+  const outputPath = opts.output ? opts.output : undefined;
 
   if (!openaiApiKey && !opts.dryRun) {
     console.error("OPENAI_API_KEY is not set");
