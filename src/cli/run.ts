@@ -6,7 +6,9 @@ import { readCache, writeCache } from "../helpers/cache";
 import { ENVS } from "./env";
 import { NotionSerializer } from "../NotionSerializer";
 
-dotenv.config();
+dotenv.config({
+  path: path.resolve(__dirname, "../../.env"),
+});
 
 const getPromptConfigFromFile = () => {
   const promptConfigPath = path.resolve(__dirname, "../../prompt/config.json");
