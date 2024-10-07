@@ -2,8 +2,13 @@ import { setup } from "./env";
 import { prompt } from "./prompt";
 import { run } from "./run";
 import { program } from "@commander-js/extra-typings";
+import packageJson from "../../package.json";
 
-program.version("0.0.1", "-v, --vers", "output the current version");
+program.version(
+  packageJson.version,
+  "-v, --vers",
+  "output the current version"
+);
 
 /* run command */
 program
